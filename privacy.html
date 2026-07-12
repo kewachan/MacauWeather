@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Macau Weather Privacy Policy</title>
+  <meta name="description" content="Privacy policy for Macau Weather.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <nav class="page nav" aria-label="Main navigation">
+      <a class="brand" href="index.html"><span class="brand-mark">☁︎</span><span>Macau Weather</span></a>
+      <div class="links">
+        <a href="index.html">Marketing</a>
+        <a href="support.html">Support</a>
+        <button class="lang-button active" data-lang="en">EN</button>
+        <button class="lang-button" data-lang="zh-Hant">繁</button>
+        <button class="lang-button" data-lang="zh-Hans">简</button>
+        <button class="lang-button" data-lang="pt">PT</button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="page">
+    <section class="language-panel active" data-panel="en">
+      <div class="hero"><div class="eyebrow">Privacy Policy</div><h1>Your data stays minimal.</h1><p class="lead">Macau Weather is designed to provide weather information without accounts or advertising tracking.</p></div>
+      <section class="section stack">
+        <article class="text-card"><h3>Information we use</h3><p>The app may use device location, if allowed, to find the nearest Macau observation station. Location is used for app functionality and is not sold.</p></article>
+        <article class="text-card"><h3>Notifications</h3><p>The app may use push notification tokens to deliver weather warning notifications selected by the user.</p></article>
+        <article class="text-card"><h3>Purchases</h3><p>Optional in-app purchases are processed by Apple. The app does not receive your payment card details.</p></article>
+        <article class="text-card"><h3>Contact</h3><p>For privacy questions, email <a href="mailto:kevin.kw.chan@icloud.com">kevin.kw.chan@icloud.com</a>.</p></article>
+      </section>
+    </section>
+
+    <section class="language-panel" data-panel="zh-Hant">
+      <div class="hero"><div class="eyebrow">私隱政策</div><h1>只使用必要資料。</h1><p class="lead">澳門天氣不設帳戶，亦不作廣告追蹤，目標是簡單提供天氣資訊。</p></div>
+      <section class="section stack">
+        <article class="text-card"><h3>我們使用的資料</h3><p>如你允許定位，App 可能會使用裝置位置尋找最接近的澳門觀測站。定位只用於 App 功能，不會出售。</p></article>
+        <article class="text-card"><h3>通知</h3><p>App 可能會使用推送通知 token，按用戶選擇發送天氣警告通知。</p></article>
+        <article class="text-card"><h3>購買</h3><p>自願性 App 內購買由 Apple 處理。App 不會取得你的付款卡資料。</p></article>
+        <article class="text-card"><h3>聯絡</h3><p>如有私隱問題，請電郵至 <a href="mailto:kevin.kw.chan@icloud.com">kevin.kw.chan@icloud.com</a>。</p></article>
+      </section>
+    </section>
+
+    <section class="language-panel" data-panel="zh-Hans">
+      <div class="hero"><div class="eyebrow">隐私政策</div><h1>只使用必要资料。</h1><p class="lead">澳门天气不设账户，也不作广告追踪，目标是简单提供天气资讯。</p></div>
+      <section class="section stack">
+        <article class="text-card"><h3>我们使用的资料</h3><p>如你允许定位，App 可能会使用设备位置寻找最接近的澳门观测站。定位只用于 App 功能，不会出售。</p></article>
+        <article class="text-card"><h3>通知</h3><p>App 可能会使用推送通知 token，按用户选择发送天气警告通知。</p></article>
+        <article class="text-card"><h3>购买</h3><p>自愿性 App 内购买由 Apple 处理。App 不会取得你的付款卡资料。</p></article>
+        <article class="text-card"><h3>联系</h3><p>如有隐私问题，请电邮至 <a href="mailto:kevin.kw.chan@icloud.com">kevin.kw.chan@icloud.com</a>。</p></article>
+      </section>
+    </section>
+
+    <section class="language-panel" data-panel="pt">
+      <div class="hero"><div class="eyebrow">Privacidade</div><h1>Usamos apenas o necessário.</h1><p class="lead">Macau Weather foi criada para fornecer informação meteorológica sem contas de utilizador nem rastreio publicitário.</p></div>
+      <section class="section stack">
+        <article class="text-card"><h3>Informação usada</h3><p>A app pode usar a localização do dispositivo, se autorizada, para encontrar a estação de observação de Macau mais próxima. A localização é usada para a funcionalidade da app e não é vendida.</p></article>
+        <article class="text-card"><h3>Notificações</h3><p>A app pode usar tokens de notificações push para enviar avisos meteorológicos escolhidos pelo utilizador.</p></article>
+        <article class="text-card"><h3>Compras</h3><p>As compras opcionais na app são processadas pela Apple. A app não recebe dados do seu cartão de pagamento.</p></article>
+        <article class="text-card"><h3>Contacto</h3><p>Para questões de privacidade, envie email para <a href="mailto:kevin.kw.chan@icloud.com">kevin.kw.chan@icloud.com</a>.</p></article>
+      </section>
+    </section>
+  </main>
+
+  <footer class="page footer">© 2026 Macau Weather. <a href="index.html">Marketing</a> · <a href="support.html">Support</a></footer>
+  <script>
+    const buttons = document.querySelectorAll(".lang-button");
+    const panels = document.querySelectorAll(".language-panel");
+    buttons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const lang = button.dataset.lang;
+        buttons.forEach((item) => item.classList.toggle("active", item === button));
+        panels.forEach((panel) => panel.classList.toggle("active", panel.dataset.panel === lang));
+        document.documentElement.lang = lang;
+      });
+    });
+  </script>
+</body>
+</html>
