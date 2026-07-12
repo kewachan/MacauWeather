@@ -1,2 +1,0 @@
-# MacauWeather
-Macau Weather App
