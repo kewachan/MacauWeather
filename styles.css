@@ -173,6 +173,66 @@ h1 {
   margin: 28px 0 72px;
 }
 
+.screenshots {
+  margin: 0 0 72px;
+}
+
+.screenshots h2 {
+  margin: 0 0 12px;
+  font-size: clamp(32px, 5vw, 54px);
+  line-height: 1;
+  letter-spacing: -0.055em;
+}
+
+.screenshots .section-lead {
+  max-width: 700px;
+  margin: 0 0 24px;
+  color: var(--muted);
+  font-size: 18px;
+}
+
+.screenshot-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  align-items: start;
+}
+
+.screenshot-card {
+  margin: 0;
+  border: 1px solid var(--line);
+  border-radius: 30px;
+  padding: 12px;
+  background: var(--panel);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(28px) saturate(1.2);
+}
+
+.screenshot-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1290 / 2796;
+  object-fit: cover;
+  border-radius: 22px;
+  background: color-mix(in srgb, var(--ink) 8%, transparent);
+}
+
+.screenshot-card.wide {
+  grid-column: 1 / -1;
+}
+
+.screenshot-card.wide img {
+  aspect-ratio: 912 / 465;
+}
+
+.screenshot-card figcaption {
+  margin: 12px 4px 4px;
+  color: var(--muted);
+  font-weight: 700;
+  font-size: 14px;
+  text-align: center;
+}
+
 .card {
   border: 1px solid var(--line);
   border-radius: 28px;
@@ -241,6 +301,38 @@ h1 {
   margin-bottom: 0;
 }
 
+.feature-list,
+.meta-list {
+  margin: 12px 0 0;
+  padding-left: 20px;
+}
+
+.feature-list li,
+.meta-list li {
+  margin: 8px 0;
+}
+
+.meta-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.meta-list strong {
+  color: var(--ink);
+}
+
+.notice {
+  border: 1px solid color-mix(in srgb, var(--accent) 45%, var(--line));
+  border-radius: 24px;
+  padding: 22px;
+  background: color-mix(in srgb, var(--accent) 10%, var(--panel));
+}
+
+.notice p {
+  margin: 0;
+  color: var(--muted);
+}
+
 .language-panel {
   display: none;
 }
@@ -278,6 +370,19 @@ h1 {
   .grid {
     grid-template-columns: 1fr;
     margin-bottom: 48px;
+  }
+
+  .screenshot-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .screenshot-card {
+    max-width: 420px;
+    margin-inline: auto;
+  }
+
+  .screenshot-card.wide {
+    max-width: 100%;
   }
 
   .card,
