@@ -200,9 +200,12 @@ h1 {
 
 .screenshot-card {
   margin: 0;
+  width: 100%;
+  min-width: 0;
   border: 1px solid var(--line);
   border-radius: 30px;
   padding: 12px;
+  overflow: hidden;
   background: var(--panel);
   box-shadow: var(--shadow);
   backdrop-filter: blur(28px) saturate(1.2);
@@ -211,8 +214,8 @@ h1 {
 .screenshot-card img {
   display: block;
   width: 100%;
-  aspect-ratio: 1290 / 2796;
-  object-fit: cover;
+  max-width: 100%;
+  height: auto;
   border-radius: 22px;
   background: color-mix(in srgb, var(--ink) 8%, transparent);
 }
@@ -223,6 +226,7 @@ h1 {
 
 .screenshot-card.wide img {
   aspect-ratio: 912 / 465;
+  object-fit: cover;
 }
 
 .screenshot-card figcaption {
