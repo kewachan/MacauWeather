@@ -229,6 +229,11 @@ h1 {
   object-fit: cover;
 }
 
+.screenshot-card.widget-preview img {
+  aspect-ratio: auto;
+  object-fit: contain;
+}
+
 .screenshot-card figcaption {
   margin: 12px 4px 4px;
   color: var(--muted);
