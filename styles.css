@@ -220,11 +220,17 @@ h1 {
   background: color-mix(in srgb, var(--ink) 8%, transparent);
 }
 
-.screenshot-card.wide {
+.screenshot-pair {
   grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  width: min(100%, 880px);
+  margin-inline: auto;
+  align-items: start;
 }
 
-.screenshot-card.wide img {
+.screenshot-card.carplay-preview img {
   aspect-ratio: 912 / 465;
   object-fit: cover;
 }
@@ -390,13 +396,16 @@ h1 {
     margin-inline: auto;
   }
 
-  .screenshot-card.wide {
-    max-width: 100%;
-  }
-
   .card,
   .text-card {
     border-radius: 22px;
     padding: 20px;
+  }
+}
+
+@media (max-width: 560px) {
+  .screenshot-pair {
+    grid-template-columns: 1fr;
+    max-width: 420px;
   }
 }
